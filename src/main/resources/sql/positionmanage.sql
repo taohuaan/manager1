@@ -1,0 +1,15 @@
+﻿DROP TABLE positionmanage;
+CREATE TABLE positionmanage (id int NOT NULL AUTO_INCREMENT COMMENT '数据ID', provincename varchar(100) NOT NULL COMMENT '省名称', cityname varchar(100) COMMENT '市名称', create_time varchar(64) COMMENT '创建时间', update_time varchar(64) COMMENT '更新时间', PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='位置管理表';
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (1, '河北省', '唐山市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (2, '河北省', '保定市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (3, '河北省', '廊坊市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (4, '河北省', '张家口市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (5, '河北省', '邯郸市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (6, '河北省', '邢台市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (7, '河北省', '石家庄市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (8, '河北省', '衡水市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (9, '河北省', '承德市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (10, '河北省', '三河市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (11, '河北省', '辛集市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (12, '河北省', '秦皇岛市', '2020/7/8', '2020/7/8');
+INSERT INTO positionmanage (id, provincename, cityname, create_time, update_time) VALUES (13, '河北省', '沧州市', '2020/7/8', '2020/7/8');
