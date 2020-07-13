@@ -40,3 +40,4 @@ INSERT INTO `base_admin_user` VALUES (2, 'jackson', '6565673a6caee66a6acbd51415b
 INSERT INTO `base_admin_user` VALUES (4, 'alice', '5e1030d25f5ca46aac4c0369b908d762', 2, '11111111111', '2018-11-22 11:01:58', 1);
 
 SET FOREIGN_KEY_CHECKS = 1;
+
