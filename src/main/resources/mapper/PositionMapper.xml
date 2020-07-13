@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haiyu.manager.dao.PositionMapper">
+  <resultMap id="BaseResultMap" type="com.haiyu.manager.pojo.BasePosition">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="provincename" jdbcType="VARCHAR" property="provinceName" />
+    <result column="cityname" jdbcType="VARCHAR" property="cityName" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+  </resultMap>
+
+  <sql id="baseColumn">
+    id,provinceName,cityName,createTime,updateTime
+  </sql>
+
+
+  <!--<update id="updateUser">-->
+    <!--UPDATE base_admin_user-->
+    <!--<set>-->
+      <!--<if test="sysUserName != null">-->
+        <!--sys_user_name = #{sysUserName},-->
+      <!--</if>-->
+      <!--<if test="sysUserPwd != null">-->
+        <!--sys_user_pwd = #{sysUserPwd},-->
+      <!--</if>-->
+      <!--<if test="roleId != null">-->
+        <!--role_id = #{roleId},-->
+      <!--</if>-->
+      <!--<if test="userPhone != null">-->
+        <!--user_phone = #{userPhone}-->
+      <!--</if>-->
+    <!--</set>-->
+    <!--WHERE id = #{id}-->
+  <!--</update>-->
+
+
+  <select id="getPositionList" resultType="com.haiyu.manager.dto.PositionDTO">
+    SELECT id, provinceName  ,cityname
+    ,create_time as createTime,update_time AS updateTime
+    FROM positionmanage as u
+    <where>
+      <if test="provinceName != null and provinceName != '' ">
+        and provincename LIKE '%' #{provinceName} '%'
+      </if>
+      <if test="cityName != null and cityName != '' ">
+        and cityname  LIKE '%' #{cityName} '%'
+      </if>
+      <if test="createTime != null and createTime != '' ">
+        and create_time &gt;  #{createTime}
+      </if>
+      <if test="updateTime != null and updateTime != '' ">
+        and update_time &lt;  #{updateTime}
+      </if>
+    </where>
+  </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haiyu.manager.dao.UserTestMapper">
+
+
+  <sql id="baseColumn">
+    id,username,sex,city,sign,experience,socre,classify,wealth
+  </sql>
+
+
+
+  <select id="getUserTestList" resultType="com.haiyu.manager.dto.UserTestDTO" >
+    SELECT <include refid="baseColumn"/>
+    FROM usertest as u
+
+  </select>
+
+</mapper>
